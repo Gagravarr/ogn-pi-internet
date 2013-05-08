@@ -11,6 +11,9 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 /sbin/iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 /sbin/iptables -A INPUT -m state --state NEW -i ! ppp0 -j ACCEPT
+# Fallback in case ppp0 isn't there
+/sbin/iptables -A INPUT -m state --state NEW -i eth0 -j ACCEPT
+/sbin/iptables -A INPUT -m state --state NEW -i eth1 -j ACCEPT
 # only if both of the above rules succeed, use
 /sbin/iptables -P INPUT DROP
 

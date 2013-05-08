@@ -22,6 +22,7 @@ We're currently using Raspbian 2013-02-29-wheezy
 Packages Required
 =================
 vim-gtk
+screen
 psmisc
 ppp
 xauth

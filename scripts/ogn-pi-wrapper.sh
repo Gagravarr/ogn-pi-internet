@@ -54,7 +54,7 @@ if [[ "$?" == "0" ]]; then
 fi
 
 # Ask PPP to start
-pppd call $DIAL updetach
+screen pppd call $DIAL
 sleep 2
 
 # Chain to the other script for now

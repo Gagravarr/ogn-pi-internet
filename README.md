@@ -27,6 +27,9 @@ ppp
 xauth
 strace
 isc-dhcp-server
+git
+usb-modeswitch
+usb-modeswitch-data
 
 TODO
 ====

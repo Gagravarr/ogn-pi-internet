@@ -1,0 +1,22 @@
+ABORT BUSY
+ABORT 'NO CARRIER'
+ABORT ERROR
+REPORT CONNECT
+TIMEOUT 10
+SAY "Calling ONE\r\n"
+"" "ATZ"
+
+#### This section if you're using a PIN, just comment it if you don't.
+# Replace your PIN in here in place of 1234
+#OK "AT+CPIN=1234"
+
+## Cheat by only looking for O, which apears in both OK and +CME ERROR :).
+O ATZ
+#### End of variable bits
+TIMEOUT 60
+OK "ATE1V1&D2&C1S0=0+IFC=2,2"
+OK AT+CGDCONT=1,"IP","internet"
+OK "AT+IPR=115200"
+OK "ATE1"
+OK "ATDT*99***1#"
+CONNECT \c

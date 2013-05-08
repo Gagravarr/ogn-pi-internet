@@ -1,0 +1,31 @@
+# If pppd reports this as a non-modem thing, then run the huaweiAktBbo program
+/dev/ttyUSB0
+460800
+
+# Don't require the peer to authenticate (this _seems_ to get the connection going in a shorter time)
+noauth
+
+# If you want more detailed logs, enable this (it doesn't generate that much noise, but assists a lot in finding problems):
+#debug
+
+# Keep pppd attached to the terminal:
+# Comment this to get daemon mode pppd
+nodetach
+
+# modem initialization
+connect "/usr/sbin/chat -V -f /etc/ppp/peers/huawei-vodafone-chat"
+
+# We probably want to use the DNS as advertized by the peer
+usepeerdns
+
+# Use this link as the default gateway
+defaultroute
+
+# 3G doesn't like all kinds of compression ... wish they did - it's slow enough.
+noccp
+nobsdcomp
+novj
+
+# Make the connection persistent, and not terminate if/when errors occur.
+persist
+maxfail 0

@@ -1,0 +1,9 @@
+#!/bin/bash
+# Wrapper to manage the OGN pi process
+while true; do
+  screen ogn-pi-wrapper.sh
+  echo ""
+  echo "Completed, restarting"
+  echo ""
+  sleep 2
+done

@@ -11,6 +11,8 @@
 #                    is run at all times, restarting as required
 ### END INIT INFO
 
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:$PATH
+
 while true; do
   screen ogn-pi-wrapper.sh
   echo ""

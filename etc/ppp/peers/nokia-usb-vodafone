@@ -15,7 +15,7 @@ noauth
 nodetach
 
 # modem initialization
-connect "/usr/sbin/chat -V -f /etc/ppp/peers/gprs-connect-chat"
+connect "/usr/sbin/chat -V -f /etc/ppp/peers/gprs-connect-chat-vodafone"
 
 # We probably want to use the DNS as advertized by the peer
 usepeerdns

@@ -1,5 +1,16 @@
 #!/bin/bash
-# Wrapper to manage the OGN pi process
+
+### BEGIN INIT INFO
+# Provides:          ogn-pi
+# Required-Start:    $all
+# Required-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Wrapper to manage the OGN Pi process
+# Description:       Wrapper to ensure that the OGN Pi process
+#                    is run at all times, restarting as required
+### END INIT INFO
+
 while true; do
   screen ogn-pi-wrapper.sh
   echo ""

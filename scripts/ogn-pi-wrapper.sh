@@ -19,7 +19,7 @@ fi
 DIAL=""
 if [[ -e /dev/ttyACM0 ]]; then
    echo "USB Mobile phone detected"
-   DIAL="nokia-usb-vodafone"
+   DIAL="nokia-usb-tmobile"
 fi
 if [[ -e /dev/ttyUSB0 ]]; then
    echo "USB Dongle detected"
